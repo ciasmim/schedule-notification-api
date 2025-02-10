@@ -28,7 +28,8 @@ public class Agendamento {
 
     @PrePersist
     private void prePersist(){
-
+        dataHoraAgendamento = LocalDateTime.now();
+        statusNotificacao = StatusNotificacaoEnum.AGENDADO;
     }
 
 }
